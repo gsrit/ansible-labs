@@ -20,7 +20,7 @@ This repository contains ansible labs with necessary modules.
 
 If you want your playbook to prompt the user for certain input, add a ‘vars_prompt’ section. Prompting the user for variables lets you avoid recording sensitive data like passwords. In addition to security, prompts support flexibility. For example, if you use one playbook across multiple software releases, you could prompt for the particular release version.
 
-```
+```yml
 ---
 - hosts: all
   vars_prompt:
