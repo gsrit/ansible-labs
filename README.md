@@ -41,6 +41,35 @@ If you want your playbook to prompt the user for certain input, add a ‘vars_pr
 ```
 
 
+## Another Example of var_prompt
+
+
+```yml
+---
+- hosts: alpha
+  vars:
+  company: vogo
+  tasks:
+     - name: debugging
+       debug:
+         msg: "{{ansible_hostname}}"
+  vars_prompt:
+     - name: "company"
+       prompt: "Where do you work"
+       private: no
+
+- hosts: webservers
+  vars_prompt:
+     - name: "fathercompany"
+       prompt: "Where your father works"
+       private: no
+  tasks:
+     - name: test
+       debug:
+         msg: just testing "{{company2}}"
+
+```
+
 
 
 
