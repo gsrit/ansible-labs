@@ -101,6 +101,30 @@ ubuntu@kube-worker-001:~$
 
 ## b. Example of shell Command Inside a `Module`
 
+In this example 
+we will create a text file on an Ansible managed node at /test/file.txt on a Linux host using an Ansibe Module.
+
+
+### Steps:
+a. Login to the Ansible controller host using SSH.
+b. Create a directory called ansible_shell_module_test the home directory of Ansible Controller Machine. 
+This directory will contain the `playbook` to run the `shell` module
+c. Create a file called `exampleplaybook.yml` using vi editor in the `~/ansible_shell_module_test` directory and paste in the following YAML playbook contents.
+This playbook has a single task that uses the Ansible shell module to send some text (any text content) to the /test/file.txt text file.
+Since the playbook will be creating the file in the /test directory, Ansible will need to run with sudo permissions using the become attribute.
+
+```yml
+tasks:
+     - name: Create a text file in opt directory using /bin/sh shell
+         ansible.builtin.shell: echo "adding test file contents " > /test/file.txt
+         become: true   # To make sure highest permissions are used on the remote host
+```
+
+
+
+
+
+
 
 
 
