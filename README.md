@@ -76,7 +76,7 @@ If you want your playbook to prompt the user for certain input, add a ‘vars_pr
 # 2. shell 
 We can run the commands on `ad-hoc` as well as using the module inside the `playbook`
 
-## Example of shell Command using an `ad-hoc` method
+## a. Example of shell Command using an `ad-hoc` method
 
 Ansible shell module can run a single command on a remote host. To do this, a one-line command on your Ansible controller will work. For example, let’s run a simple command on a remote host to print the PATH environment variable‘s value on a remote machine.
 
@@ -99,7 +99,7 @@ ubuntu@kube-worker-001:~$
 ```
 
 
-## Example of shell Command Inside a `Module`
+## b. Example of shell Command Inside a `Module`
 
 
 
