@@ -107,8 +107,10 @@ we will create a text file on an Ansible managed node at /test/file.txt on a Lin
 
 ### Steps:
 a. Login to the Ansible controller host using SSH.
+
 b. Create a directory called ansible_shell_module_test the home directory of Ansible Controller Machine. 
 This directory will contain the `playbook` to run the `shell` module
+
 c. Create a file called `exampleplaybook.yml` using vi editor in the `~/ansible_shell_module_test` directory and paste in the following YAML playbook contents.
 This playbook has a single task that uses the Ansible shell module to send some text (any text content) to the /test/file.txt text file.
 Since the playbook will be creating the file in the /test directory, Ansible will need to run with sudo permissions using the become attribute.
