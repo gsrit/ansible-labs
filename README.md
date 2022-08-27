@@ -122,8 +122,19 @@ tasks:
          become: true   # To make sure highest permissions are used on the remote host
 ```
 
-d. 
-e.
+
+# 4. Register
+
+Ansible registers can be  used when we need to capture the output of a task and store it in a variable.
+It can be used for below use cases.
+
+Conditional statement, 
+Logging
+Service Status Check
+System Uptime
+
+The variables will contain the value returned by the task.
+
 
 
 
